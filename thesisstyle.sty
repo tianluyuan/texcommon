@@ -13,6 +13,13 @@
 \usepackage{mhchem} % type chemical symbols with \ce{^4_2He}
 \usepackage{accents} % tools for new math accents
 
+% setup units formatting
+\sisetup{
+  alsoload = hep,
+  range-units = single,
+  range-phrase = --
+}
+
 % useful command macros. spaces typed after declaration of a macro are
 % suppressed, use {} to complete the macro and ensure proper behavior
 \newcommand*{\bbar}[1]{\accentset{[-]}{#1}}
