@@ -1,0 +1,38 @@
+\ProvidesPackage{thesisstyle}
+\usepackage{graphicx}
+% \usepackage{hyperref} % breaks when compiled with CU thesis.cls
+\usepackage{url}
+\usepackage{appendix}
+\usepackage{amssymb, amsmath} % for the \begin{align}... \end{align}
+                              % command 
+\usepackage[lofdepth, lotdepth]{subfig}
+\usepackage{siunitx} % for units e.g. \SI{50}{\micro\second}
+\usepackage{textgreek} % type greek letters in text mode with
+                       % \textbeta
+\usepackage{physics} % for simplifying typing of physics notations
+\usepackage{mhchem} % type chemical symbols with \ce{^4_2He}
+\usepackage{accents} % tools for new math accents
+
+% useful command macros. spaces typed after declaration of a macro are
+% suppressed, use {} to complete the macro and ensure proper behavior
+\newcommand*{\bbar}[1]{\accentset{[-]}{#1}}
+\newcommand*{\pbar}[1]{\accentset{(-)}{#1}}
+\newcommand*{\conj}[1]{\overline{#1}}
+\newcommand*{\pd}{$\text{P} \varnothing \text{D}$}
+
+% particles
+\newcommand*{\elec}{\ce{e-}}
+\newcommand*{\prot}{\ce{p+}}
+\newcommand*{\neut}{\ce{n^0}}
+\newcommand*{\posi}{\ce{e+}}
+\newcommand*{\mup}{\ce{\mu+}}
+\newcommand*{\mum}{\ce{\mu-}}
+\newcommand*{\nue}{\ce{\nu_e}}
+\newcommand*{\numu}{\ce{\nu_{\textmu}}}
+\newcommand*{\nutau}{\ce{\nu_{\texttau}}}
+\newcommand*{\piz}{\ce{\pi^0}}
+\newcommand*{\pip}{\ce{\pi+}}
+\newcommand*{\pim}{\ce{\pi-}}
+\newcommand*{\kaz}{\ce{K^0}}
+\newcommand*{\kap}{\ce{K+}}
+\newcommand*{\kam}{\ce{K-}}
