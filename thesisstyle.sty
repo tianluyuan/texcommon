@@ -1,12 +1,26 @@
 \ProvidesPackage{thesisstyle}
-\usepackage{graphicx}
-% \usepackage{hyperref} % breaks when compiled with CU thesis.cls
-\usepackage{url}
-\usepackage{appendix}
-% for the \begin{align}... \end{align} command
+% always want to include this to follow ams style \begin{align}, etc
 \usepackage{amssymb, amsmath}
+% introduces the \includegraphics command, which is needed for inserting figures
+\usepackage{graphicx}
 \usepackage[lofdepth, lotdepth]{subfig}
-% for units e.g. \SI{50}{\micro\second}
+% allows typing utf8 chars directly
+\usepackage[utf8]{inputenc}
+% T1 font encoding is an 8-bit encoding and % uses fonts that have 256
+% glyphs, thus we can copy and paste accented words from % output and
+% hyphenate accented words
+\usepackage[T1]{fontenc}
+% enhancing the appearance and readability of a document while
+% exhibiting a minimum degree of visual obtrusion
+\usepackage{microtype}
+% 'hyperref' breaks when compiled with CU thesis.cls so use 'url' instead
+% \usepackage{hyperref}
+\usepackage{url}
+% allows formatting titles in appendices
+\usepackage{appendix}
+% automatically include the type of ref (e.g. fig., eq.) with \cref
+\usepackage{cleveref}
+% for pretty and robust units e.g. \SI{50}{\micro\second}
 \usepackage{siunitx}
 % type greek letters in text mode with \textbeta
 \usepackage{textgreek}
@@ -16,14 +30,9 @@
 \usepackage{mhchem}
 % tools for defining new math accents (e.g. pbar, bbar)
 \usepackage{accents}
-% allows typing utf8 chars directly
-\usepackage[utf8]{inputenc}
-% T1 font encoding is an 8-bit encoding and uses fonts that have 256
-% glyphs, thus we can copy and paste accented words from output and
-% hyphenate accented words
-\usepackage[T1]{fontenc}
 
 % setup siunitx formatting options
+% see siunitx documentation for list of options
 \sisetup{
   alsoload = hep,
   range-units = single,
