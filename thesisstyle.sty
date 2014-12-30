@@ -3,17 +3,27 @@
 % \usepackage{hyperref} % breaks when compiled with CU thesis.cls
 \usepackage{url}
 \usepackage{appendix}
-\usepackage{amssymb, amsmath} % for the \begin{align}... \end{align}
-                              % command 
+% for the \begin{align}... \end{align} command
+\usepackage{amssymb, amsmath}
 \usepackage[lofdepth, lotdepth]{subfig}
-\usepackage{siunitx} % for units e.g. \SI{50}{\micro\second}
-\usepackage{textgreek} % type greek letters in text mode with
-                       % \textbeta
-\usepackage{physics} % for simplifying typing of physics notations
-\usepackage{mhchem} % type chemical symbols with \ce{^4_2He}
-\usepackage{accents} % tools for defining new math accents
+% for units e.g. \SI{50}{\micro\second}
+\usepackage{siunitx}
+% type greek letters in text mode with \textbeta
+\usepackage{textgreek}
+% for simplifying typing of physics notations
+\usepackage{physics}
+% type chemical symbols with \ce{^4_2He}
+\usepackage{mhchem}
+% tools for defining new math accents (e.g. pbar, bbar)
+\usepackage{accents}
+% allows typing utf8 chars directly
+\usepackage[utf8]{inputenc}
+% T1 font encoding is an 8-bit encoding and uses fonts that have 256
+% glyphs, thus we can copy and paste accented words from output and
+% hyphenate accented words
+\usepackage[T1]{fontenc}
 
-% setup units formatting
+% setup siunitx formatting options
 \sisetup{
   alsoload = hep,
   range-units = single,
