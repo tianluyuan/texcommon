@@ -30,13 +30,16 @@
 \usepackage{mhchem}
 % tools for defining new math accents (e.g. pbar, bbar)
 \usepackage{accents}
+% package for feynman slash notation
+\usepackage{slashed}
 
 % setup siunitx formatting options
 % see siunitx documentation for list of options
 \sisetup{
   alsoload = hep,
   range-units = single,
-  range-phrase = --
+  range-phrase = --,
+  quotient-mode = fraction
 }
 
 % useful command macros. spaces typed after declaration of a macro are
@@ -62,3 +65,6 @@
 \newcommand*{\kaz}{\ce{K^0}}
 \newcommand*{\kap}{\ce{K+}}
 \newcommand*{\kam}{\ce{K-}}
+
+% define math operators here using amsmath macro
+\DeclareMathOperator{\lagr}{\mathcal{L}}
