@@ -44,10 +44,10 @@
 
 % useful command macros. spaces typed after declaration of a macro are
 % suppressed, use {} to complete the macro and ensure proper behavior
+% accents
 \newcommand*{\bbar}[1]{\accentset{[-]}{#1}}
 \newcommand*{\pbar}[1]{\accentset{(-)}{#1}}
 \newcommand*{\conj}[1]{\overline{#1}}
-\newcommand*{\pd}{$\text{P} \varnothing \text{D}$}
 
 % particles
 \newcommand*{\elec}{\ce{e-}}
@@ -65,6 +65,15 @@
 \newcommand*{\kaz}{\ce{K^0}}
 \newcommand*{\kap}{\ce{K+}}
 \newcommand*{\kam}{\ce{K-}}
+\newcommand*{\wplus}{\ce{W+}}
+\newcommand*{\wminus}{\ce{W-}}
+\newcommand*{\zzero}{\ce{Z^0}}
+\newcommand*{\photon}{\ce{\gamma}}
 
-% define math operators here using amsmath macro
-\DeclareMathOperator{\lagr}{\mathcal{L}}
+% define common math operators and formulae
+\DeclareMathOperator{\lagr}{\mathcal{L}} % curly L
+\newcommand*{\group}[2]{\text{#1}\pqty{#2}} % for typing groups like SU(2)
+\newcommand*{\diraclagr}[1]{\conj{\Psi}\pqty{i\slashed{#1}-m}\Psi} % for the dirac lagrangian
+
+% miscellaneous 
+\newcommand*{\pd}{$\text{P} \varnothing \text{D}$}
