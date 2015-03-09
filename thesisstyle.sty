@@ -3,7 +3,11 @@
 \usepackage{amssymb, amsmath}
 % introduces the \includegraphics command, which is needed for inserting figures
 \usepackage{graphicx}
+% introduces subfig package.  options tells latex to include subfigs
+% in lof
 \usepackage[lofdepth, lotdepth]{subfig}
+% control for captions
+\usepackage{caption}
 % allows typing utf8 chars directly
 \usepackage[utf8]{inputenc}
 % T1 font encoding is an 8-bit encoding and % uses fonts that have 256
@@ -27,7 +31,7 @@
 % for simplifying typing of physics notations
 \usepackage{physics}
 % type chemical symbols with \ce{^4_2He}
-\usepackage{mhchem}
+\usepackage[version=3]{mhchem}
 % tools for defining new math accents (e.g. pbar, bbar)
 \usepackage{accents}
 % package for feynman slash notation
@@ -41,7 +45,8 @@
   alsoload = hep,
   range-units = single,
   range-phrase = --,
-  quotient-mode = fraction
+  quotient-mode = fraction,
+  separate-uncertainty = true
 }
 
 % useful command macros. spaces typed after declaration of a macro are
@@ -59,8 +64,8 @@
 \newcommand*{\mup}{\ce{\mu+}}
 \newcommand*{\mum}{\ce{\mu-}}
 \newcommand*{\nue}{\ce{\nu_e}}
-\newcommand*{\numu}{\ce{\nu_{\textmu}}}
-\newcommand*{\nutau}{\ce{\nu_{\texttau}}}
+\newcommand*{\numu}{\ce{\nu_{$\mu$}}}
+\newcommand*{\nutau}{\ce{\nu_{$\tau$}}}
 \newcommand*{\piz}{\ce{\pi^0}}
 \newcommand*{\pip}{\ce{\pi+}}
 \newcommand*{\pim}{\ce{\pi-}}
@@ -80,3 +85,4 @@
 
 % miscellaneous 
 \newcommand*{\pd}{$\text{P} \varnothing \text{D}$}
+\newcommand*{\dcp}{$\delta_{\text{CP}}$}
