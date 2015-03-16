@@ -528,8 +528,8 @@ if$
 }
 FUNCTION {article}
 { output.bibitem
-collaboration output
 format.authors "author" output.check
+collaboration output
 new.block
 crossref missing$
 { journal field.or.null
@@ -555,7 +555,6 @@ fin.entry
 }
 FUNCTION {book}
 { output.bibitem
-collaboration output
 author empty$
 { format.editors "author and editor" output.check }
 { format.authors output.nonnull
@@ -565,6 +564,7 @@ crossref missing$
 if$
 }
 if$
+collaboration output
 new.block
 crossref missing$
 { format.book.entry output }
@@ -579,8 +579,8 @@ fin.entry
 }
 FUNCTION {booklet}
 { output.bibitem
-collaboration output
 format.authors output
+collaboration output
 new.block
 format.title "title" output.check
 howpublished address new.block.checkb
@@ -594,7 +594,6 @@ fin.entry
 }
 FUNCTION {inbook}
 { output.bibitem
-collaboration output
 author empty$
 { format.editors "author and editor" output.check }
 { format.authors output.nonnull
@@ -604,6 +603,7 @@ crossref missing$
 if$
 }
 if$
+collaboration output
 new.block
 crossref missing$
 { format.inbook.entry output }
@@ -619,10 +619,10 @@ fin.entry
 }
 FUNCTION {incollection}
 { output.bibitem
-collaboration output
 format.authors "author" output.check
 new.block
 format.title "title" output.check
+collaboration output
 new.block
 crossref missing$
 { format.in.ed.booktitle "booktitle" output.check
@@ -646,10 +646,10 @@ fin.entry
 }
 FUNCTION {inproceedings}
 { output.bibitem
-collaboration output
 format.authors "author" output.check
 new.block
 format.title "title" output.check
+collaboration output
 new.block
 crossref missing$
 { format.in.ed.booktitle "booktitle" output.check
@@ -682,7 +682,6 @@ fin.entry
 FUNCTION {conference} { inproceedings }
 FUNCTION {manual}
 { output.bibitem
-collaboration output
 author empty$
 { organization empty$
 'skip$
@@ -693,6 +692,7 @@ if$
 }
 { format.authors output.nonnull }
 if$
+collaboration output
 new.block
 format.btitle "title" output.check
 author empty$
@@ -732,8 +732,8 @@ fin.entry
 }
 FUNCTION {misc}
 { output.bibitem
-collaboration output
 format.authors output
+collaboration output
 title howpublished new.block.checkb
 format.title output
 howpublished new.block.checka
@@ -762,11 +762,11 @@ fin.entry
 }
 FUNCTION {proceedings}
 { output.bibitem
-collaboration output
 editor empty$
 { organization output }
 { format.editors output.nonnull }
 if$
+collaboration output
 new.block
 format.btitle "title" output.check
 format.bvolume output
@@ -798,8 +798,8 @@ fin.entry
 }
 FUNCTION {techreport}
 { output.bibitem
-collaboration output
 format.authors "author" output.check
+collaboration output
 new.block
 format.inst.tr.num.date output.nonnull
 eprint output
@@ -809,8 +809,8 @@ fin.entry
 }
 FUNCTION {unpublished}
 { output.bibitem
-collaboration output
 format.authors "author" output.check
+collaboration output
 new.block
 format.title "title" output.check
 new.block
