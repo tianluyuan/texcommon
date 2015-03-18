@@ -10,8 +10,8 @@
 \usepackage{caption}
 % allows typing utf8 chars directly
 \usepackage[utf8]{inputenc}
-% T1 font encoding is an 8-bit encoding and % uses fonts that have 256
-% glyphs, thus we can copy and paste accented words from % output and
+% T1 font encoding is an 8-bit encoding and uses fonts that have 256
+% glyphs, thus we can copy/paste accented words from the pdftex output and
 % hyphenate accented words
 \usepackage[T1]{fontenc}
 % enhancing the appearance and readability of a document while
@@ -87,6 +87,10 @@
 \newcommand*{\group}[2]{\text{#1}\pqty{#2}} % for typing groups like SU(2)
 \newcommand*{\diraclagr}[1]{\conj{\Psi}\pqty{i\slashed{#1}-m}\Psi} % for the dirac lagrangian
 
-% miscellaneous 
+% p0d
 \newcommand*{\pd}{P\O{}D}
+\newcommand*{\pdule}{\pd{}ule}
+\newcommand*{\spdule}{Super-\pdule{}}
+
+% miscellaneous 
 \newcommand*{\dcp}{$\delta_{\text{CP}}$}
