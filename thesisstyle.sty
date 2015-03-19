@@ -38,6 +38,8 @@
 \usepackage{slashed}
 % package for drawing feynman diagrams
 \usepackage{feynmp-auto}
+% use natbib for sorting citation numbers
+\usepackage[numbers,sort]{natbib}
 
 % setup siunitx formatting options
 % see siunitx documentation for list of options
@@ -48,6 +50,7 @@
   quotient-mode = fraction,
   separate-uncertainty = true
 }
+\DeclareSIUnit\pe{p.e.}
 
 % useful command macros. spaces typed after declaration of a macro are
 % suppressed, use {} to complete the macro and ensure proper behavior
