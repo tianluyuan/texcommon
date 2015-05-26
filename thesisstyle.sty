@@ -1,4 +1,4 @@
-\ProvidesPackage{thesisstyle}
+\ProvidesPackage{texcommon/thesisstyle}
 % always want to include this to follow ams style \begin{align}, etc
 \usepackage{amssymb, amsmath}
 % introduces the \includegraphics command, which is needed for inserting figures
@@ -42,8 +42,10 @@
 \usepackage[numbers,sort]{natbib}
 % defines table rules for professional looking tables
 \usepackage{booktabs}
-% formatting for dates
-\usepackage{datetime2}
+% formatting for dates. Doesn't come installed by default in
+% texlive2014. Also, must be sure to install required language modules
+% (e.g. "datetime2-english")
+\usepackage[useregional]{datetime2}
 
 % setup siunitx formatting options
 % see siunitx documentation for list of options
