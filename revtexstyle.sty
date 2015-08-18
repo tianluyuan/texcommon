@@ -1,0 +1,108 @@
+\ProvidesPackage{texcommon/revtexstyle}
+% always want to include this to follow ams style \begin{align}, etc
+\usepackage{amssymb, amsmath}
+% introduces the \includegraphics command, which is needed for inserting figures
+\usepackage{graphicx}
+% introduces subfig package.  options tells latex to include subfigs
+% in lof
+\usepackage[lofdepth, lotdepth]{subfig}
+% control for captions
+\usepackage{caption}
+% allows typing utf8 chars directly
+\usepackage[utf8]{inputenc}
+% T1 font encoding is an 8-bit encoding and uses fonts that have 256
+% glyphs, thus we can copy/paste accented words from the pdftex output and
+% hyphenate accented words
+\usepackage[T1]{fontenc}
+% enhancing the appearance and readability of a document while
+% exhibiting a minimum degree of visual obtrusion
+\usepackage{microtype}
+% 'hyperref' breaks when compiled with CU thesis.cls so use 'url' instead
+% \usepackage{hyperref}
+\usepackage{hyperref}
+% allows formatting titles in appendices
+\usepackage{appendix}
+% automatically include the type of ref (e.g. fig., eq.) with \cref
+\usepackage[capitalize]{cleveref}
+% for pretty and robust units e.g. \SI{50}{\micro\second}
+\usepackage{siunitx}
+% type greek letters in text mode with \textbeta
+\usepackage{textgreek}
+% for simplifying typing of physics notations
+\usepackage{physics}
+% type chemical symbols with \ce{^4_2He}
+\usepackage[version=3]{mhchem}
+% tools for defining new math accents (e.g. pbar, bbar)
+\usepackage{accents}
+% package for feynman slash notation
+\usepackage{slashed}
+% package for drawing feynman diagrams
+\usepackage{feynmp-auto}
+% defines table rules for professional looking tables
+\usepackage{booktabs}
+% formatting for dates. Doesn't come installed by default in
+% texlive2014. Also, must be sure to install required language modules
+% (e.g. "datetime2-english")
+\usepackage[useregional]{datetime2}
+
+% setup siunitx formatting options
+% see siunitx documentation for list of options
+\sisetup{
+  alsoload = hep,
+  range-units = single,
+  range-phrase = --,
+  quotient-mode = fraction,
+  separate-uncertainty = true
+}
+% declare new units for siunitx here
+\DeclareSIUnit\pe{p.e.}
+\DeclareSIUnit\mwe{m.w.e}
+
+% useful command macros. spaces typed after declaration of a macro are
+% suppressed, use {} to complete the macro and ensure proper behavior
+% accents
+\newcommand*{\bbar}[1]{\accentset{[-]}{#1}}
+\newcommand*{\pbar}[1]{\accentset{(-)}{#1}}
+\newcommand*{\conj}[1]{\overline{#1}}
+
+% particles
+\newcommand*{\elec}{\ce{e-}}
+\newcommand*{\prot}{\ce{p+}}
+\newcommand*{\neut}{\ce{n^0}}
+\newcommand*{\posi}{\ce{e+}}
+\newcommand*{\mup}{\ce{\mu+}}
+\newcommand*{\mum}{\ce{\mu-}}
+\newcommand*{\nue}{\ce{\nu_e}}
+\newcommand*{\numu}{\ce{\nu_{$\mu$}}}
+\newcommand*{\nutau}{\ce{\nu_{$\tau$}}}
+\newcommand*{\piz}{\ce{\pi^0}}
+\newcommand*{\pip}{\ce{\pi+}}
+\newcommand*{\pim}{\ce{\pi-}}
+\newcommand*{\kaz}{\ce{K^0}}
+\newcommand*{\kap}{\ce{K+}}
+\newcommand*{\kam}{\ce{K-}}
+\newcommand*{\wplus}{\ce{W+}}
+\newcommand*{\wminus}{\ce{W-}}
+\newcommand*{\wpm}{\ce{W^{$\pm$}}}
+\newcommand*{\zzero}{\ce{Z^0}}
+\newcommand*{\photon}{\ce{\gamma}}
+
+% topologies
+\newcommand*{\cczpi}{CC0\ce{\pi}}
+\newcommand*{\ccopi}{CC1\ce{\pi}}
+
+% define common math operators and formulae
+\DeclareMathOperator{\lagr}{\mathcal{L}} % curly L
+\newcommand*{\group}[2]{\text{#1}\pqty{#2}} % for typing groups like SU(2)
+\newcommand*{\diraclagr}[1]{\conj{\Psi}\pqty{i\slashed{#1}-m}\Psi} % for the dirac lagrangian
+
+% detector and experiment abbrevs
+\newcommand*{\pd}{P\O{}D}
+\newcommand*{\pdule}{\pd{}ule}
+\newcommand*{\spdule}{Super-\pdule{}}
+\newcommand*{\minerva}{MINER\textnu{}A}
+\newcommand*{\miniboone}{MiniBooNE}
+\newcommand*{\sciboone}{SciBooNE}
+
+% miscellaneous 
+\newcommand*{\dcp}{$\delta_{\text{CP}}$}
