@@ -4,3 +4,8 @@
 % cleveref should be loaded after all other packages that modify
 % referencing system
 \usepackage[capitalize]{cleveref}
+
+% new command for automatically printing url in footnote with href
+\newcommand\fnurl[2]{%
+  \href{#1}{#2}\footnote{\url{#1}}%
+}
