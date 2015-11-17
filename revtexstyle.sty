@@ -4,6 +4,10 @@
 % cleveref should be loaded after all other packages that modify
 % referencing system
 \usepackage[capitalize]{cleveref}
+% Defines a \FloatBarrier command, beyond which floats may not pass;
+% useful, for example, to ensure all floats for a section appear
+% before the next \section command.
+\usepackage[section]{placeins}
 
 % new command for automatically printing url in footnote with href
 \newcommand\fnurl[2]{%
