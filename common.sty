@@ -52,7 +52,6 @@
 % setup siunitx formatting options
 % see siunitx documentation for list of options
 \sisetup{
-  alsoload = hep,
   range-units = single,
   range-phrase = --,
   quotient-mode = fraction,
@@ -61,6 +60,23 @@
 % declare new units for siunitx here
 \DeclareSIUnit\pe{p.e.}
 \DeclareSIUnit\mwe{m.w.e}
+% High energy physics
+\DeclareSIUnit\micron{\micro\metre}
+\DeclareSIUnit\mrad{\milli\rad}
+\DeclareSIUnit\gauss{G}
+\DeclareSIUnit\eVperc{\eV\per\clight}
+\DeclareSIUnit\nanobarn{\nano\barn}
+\DeclareSIUnit\picobarn{\pico\barn}
+\DeclareSIUnit\femtobarn{\femto\barn}
+\DeclareSIUnit\attobarn{\atto\barn}
+\DeclareSIUnit\zeptobarn{\zepto\barn}
+\DeclareSIUnit\yoctobarn{\yocto\barn}
+\DeclareSIUnit\nb{\nano\barn}
+\DeclareSIUnit\pb{\pico\barn}
+\DeclareSIUnit\fb{\femto\barn}
+\DeclareSIUnit\ab{\atto\barn}
+\DeclareSIUnit\zb{\zepto\barn}
+\DeclareSIUnit\yb{\yocto\barn}
 
 % useful command macros. spaces typed after declaration of a macro are
 % suppressed, use {} to complete the macro and ensure proper behavior
